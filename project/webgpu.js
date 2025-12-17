@@ -26,25 +26,25 @@ async function main() {
     const shaderCode = await fetch('./shaders.wgsl').then(res => res.text());
     context.configure({ device, format, alphaMode: 'premultiplied' });
 
-    // Create default textures for when a layer is disabled in the ui
-    // Diffuse Off: Grey = (128, 128, 128)
+    // default textures for when a layer is disabled in the ui
+    // diffuse off: grey 
     defaultTextures.diffuse = createDefaultTexture(device, [128, 128, 128, 255]); 
-    // Normal Off: Flat Blue (128, 128, 255)
+    // normal off: flat blue (128, 128, 255)
     defaultTextures.normal = createDefaultTexture(device, [128, 128, 255, 255]);
-    // Disp Off: Black (No height)
+    // disp off: black
     defaultTextures.disp = createDefaultTexture(device, [0, 0, 0, 255]);
-    // Rough Off: Grey (Medium shiny)
+    // rough off: grey
     defaultTextures.rough = createDefaultTexture(device, [128, 128, 128, 255]);
-    // AO Off: White (No shadow)
+    // ao off: white
     defaultTextures.ao = createDefaultTexture(device, [255, 255, 255, 255]);
 
-    // Load default texture set
+    // load default texture set
     await loadTextureSet(device, textureSets.set1.folder);
 
-    // Generate sphere geometry
+    // generate sphere geometry
     const sphereData = createSphere(1.75, 128, 128);
 
-    // Map sphere data to Float32Array
+    // map sphere data to float32array
     const vertexCount = sphereData.positions.length / 3;
     const interleavedData = new Float32Array(vertexCount * 8); 
     for(let i=0; i < vertexCount; i++) {

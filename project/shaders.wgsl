@@ -29,7 +29,7 @@ struct VertexOutput {
 fn vs_main(input : VertexInput) -> VertexOutput {
     var output : VertexOutput;
     
-    // Add tiling for more details
+    // tiling for more details
     let tiling = 2.0;
     let scaledUV = input.uv * tiling;
 
@@ -53,14 +53,11 @@ fn fs_main(input : VertexOutput) -> @location(0) vec4<f32> {
     let roughness = textureSample(roughTex, mySampler, input.vUv).r;
     let ao = textureSample(aoTex, mySampler, input.vUv).r;
 
-    // 2. Normal Mapping Logic (Simplified for Sphere)
-    // We unpack the normal map from [0,1] to [-1,1]
+    // scale normal map from [0,1] to [-1,1]
     let mapN = normalize(normalMap * 2.0 - 1.0);
-    // Note: For perfect results, you need Tangents. For this assignment, 
-    // combining the surface normal with the map normal often passes as "good enough".
     let finalNormal = normalize(input.vNormal + mapN * 0.5);
 
-    // 3. Lighting (Blinn-Phong)
+    // lighting
     let lightPos = vec3<f32>(5.0, 5.0, 7.0);
     let viewDir = normalize(uniforms.cameraPosition - input.vPosition);
     let lightDir = normalize(lightPos - input.vPosition);
@@ -68,13 +65,12 @@ fn fs_main(input : VertexOutput) -> @location(0) vec4<f32> {
 
     let NdotL = max(dot(finalNormal, lightDir), 0.0);
     
-    // Specular based on Roughness
-    // If roughness is high, specular power is low
+    // specualar with roughness
     let specPower = (1.0 - roughness) * 128.0; 
     let NdotH = max(dot(finalNormal, halfDir), 0.0);
     let specular = pow(NdotH, specPower) * (1.0 - roughness);
 
-    // Combine
+    // combine
     let ambient = baseColor * 0.1 * ao;
     let diffuse = baseColor * NdotL;
     

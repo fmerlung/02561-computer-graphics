@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="./utils.js"></script>
+        <script type="text/javascript" src="./OBJParser.js"></script>
+        <script type="text/javascript" src="./webgpu.js"></script>
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600">
+            Please use a browser that supports HTML5 canvas.
+        </canvas>
+        Vertex normals are obtained from the OBJ file, using the "vn" entries.
+        Normals are then transformed to world space, so they can be compared witht the light position.
+        <br>
+        The smoothness of the surface relies on the interpolation of the vertex normals across the surface.
+        Phong shading is used to compute the lighting per pixel, and despite the low poly count of the model, it ends up appearing quite smooth.
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebGPU Texturing & Mipmapping</title>
+        <script type="text/javascript" src="./utils.js"></script>
+        <script type="text/javascript" src="./genmipmap.js"></script>
+        <script type="text/javascript" src="./webgpu.js"></script>
+    </head>
+    <body>
+        <div class="controls">
+            Wrapping mode:
+            <select id="addressMode">
+                <option value="repeat">Repeat</option>
+                <option value="clamp-to-edge">Clamp to Edge</option>
+                </select ><br />
+            Min Filter:
+            <select id="minFilter">
+                <option value="nearest">Nearest</option>
+                <option value="linear">Linear</option>
+            </select><br />
+            Mag Filter:
+            <select id="magFilter">
+                <option value="nearest">Nearest</option>
+                <option value="linear">Linear</option>
+            </select><br />
+            Mipmap Filter:
+            <select id="mipmapFilter">
+                <option value="nearest">Nearest</option>
+                <option value="linear">Linear</option>
+            </select><br />
+            Mipmapping:
+            <select id="useMipmaps">
+                <option value="true">Enabled</option>
+                <option value="false">Disabled</option>
+            </select>
+        </div>
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </body>
+</html>

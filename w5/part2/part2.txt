@@ -1,0 +1,1 @@
+downloading and using the Suzanne blender default model was chosen.

@@ -1,0 +1,18 @@
+a) Flat shading: The lighting calculation is performed once per triangle face. This results in the triangle being a single flat color.
+   Gouraud shading: This calculation is done per vertex in the vertex shader. Colors are then interpolated across the surface. 
+   Phong shading: Performed per fragment in the fragment shader. The normals are interpolated across the surface and calculated per pixel.
+
+   Flat shading can be done by duplicating the vertices for every triangle so no vertices are shared. Then give each vertex of a triangle the same normal vector, based on its face.
+
+   Phong shading is the best as it is done per pixel instead of Gouraud which has highlights averaged out across the triangle faces.
+
+b) A directional light shines with parallel rays from no specific point, and intensity is affected by distance. 
+   A point light is a light source from a specific position, in theory shining all around it, but calculations only care about what is actually hit by the rays. Intensity also diminishes over a distance.
+
+c) Yes, for specular reflections. Diffuse reflection is independent of the viewing angle, while specular is not. Specular relies on the angle between reflection vector and the view vector, which change as the eye moves around, changing the specular highlight.
+
+d) It removes the specular highlight, thus making the object appear more matte.
+
+e) It makes the specular highlight smaller and shaper/more intense.
+
+

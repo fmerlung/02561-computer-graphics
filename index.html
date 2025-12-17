@@ -4,7 +4,7 @@
 
      <script>
         const devMode = false; 
-        const currentProject = "./w3/part3/part3.txt";
+        const currentProject = "./w6/part3/index.html";
 
         if (devMode) {
             window.location.replace(currentProject);
@@ -15,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Graphics Fall 2025</title>
     <style>
-        /* --- Basic Reset & Typography --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
@@ -34,7 +33,6 @@
         h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #1a1a1a; }
         p.subtitle { color: #666; font-size: 1.1rem; }
 
-        /* --- Grid Layout --- */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,7 +41,6 @@
             margin: 0 auto;
         }
 
-        /* --- Card Styling (Container) --- */
         .card {
             background: white;
             border-radius: 12px;
@@ -55,10 +52,9 @@
             height: 100%; /* Makes cards same height in a row */
         }
 
-        /* Top part of card (Title/Desc) */
         .card-content {
             padding: 1.5rem;
-            flex-grow: 1; /* Pushes the buttons to the bottom */
+            flex-grow: 1;
         }
 
         .card-title {
@@ -74,7 +70,6 @@
             margin-bottom: 1rem;
         }
 
-        /* --- Button Section --- */
         .card-actions {
             background-color: #fafafa;
             border-top: 1px solid #eaeaea;
@@ -96,7 +91,6 @@
             gap: 0.5rem;
         }
 
-        /* --- The Small Buttons --- */
         .btn {
             display: inline-block;
             text-decoration: none;
@@ -115,7 +109,6 @@
             transform: translateY(-1px);
         }
 
-        /* Optional: Highlight the "Final" version button */
         .btn.primary {
             background-color: #007bff;
             color: white;
@@ -130,7 +123,8 @@
 
     <header>
         <h1>Worksheets and Project</h1>
-        <p class="subtitle">by Filip Merlung (s180436)</p>
+        <p class="subtitle">02561 Computer Graphics</p>
+        <p class="subtitle"><i>by Filip Merlung (s180436)</i></p>
     </header>
 
     <main class="project-grid">
@@ -192,6 +186,55 @@
                     <a href="./w3/part1/index.html" class="btn">1</a>
                     <a href="./w3/part2/index.html" class="btn">2</a>
                     <a href="./w3/part3/part3.txt" class="btn">2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Worksheet 4</div>
+            </div>
+            
+            <div class="card-actions">
+                <div class="actions-label">Select part</div>
+                <div class="btn-group">
+                    <a href="./w4/part1/index.html" class="btn">1</a>
+                    <a href="./w4/part2/index.html" class="btn">2</a>
+                    <a href="./w4/part3/index.html" class="btn">3</a>
+                    <a href="./w4/part4/index.html" class="btn">4</a>
+                    <a href="./w4/part5/index.html" class="btn">5</a>
+                    <a href="./w4/part6/part6.txt" class="btn">6</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Worksheet 5</div>
+            </div>
+            
+            <div class="card-actions">
+                <div class="actions-label">Select part</div>
+                <div class="btn-group">
+                    <a href="./w5/part1/part1.txt" class="btn">1</a>
+                    <a href="./w5/part2/part2.txt" class="btn">2</a>
+                    <a href="./w5/part3/index.html" class="btn">3</a>
+                    <a href="./w5/part4/index.html" class="btn">4</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Worksheet 5</div>
+            </div>
+            
+            <div class="card-actions">
+                <div class="actions-label">Select part</div>
+                <div class="btn-group">
+                    <a href="./w6/part1/index.html" class="btn">1</a>
+                    <a href="./w6/part2/index.html" class="btn">2</a>
+                    <a href="./w6/part3/index.html" class="btn">3</a>
                 </div>
             </div>
         </div>
