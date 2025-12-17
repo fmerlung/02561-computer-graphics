@@ -1,1 +1,19 @@
-this is the explanation of part3.
+Translation matrix: Used to center the cube vertices. Since the vertices are defined in range (0, 1), 
+they need to be moved for the object to have its center in the origin.
+
+Y-Axis rotation matrix: Used to rotate the model around the Y-axis. 
+
+X-Axis rotation matrix: Used to rotate the model around the X-axis.
+
+View matrix: Used to transform world cooridnates into camera coordinates.
+
+Project matrix: Used to transform camera coordinates into clip space.
+
+Cube 1 (one-point): Centering translation -> View -> projection
+M = P * V * T
+
+Cube 2 (two-point): Centering translation -> Rotation Y -> View -> Projection
+M = P * V * R_y * T
+
+Cube 3 (three-point): Centering translation -> Rotation Y -> Rotation X -> View -> Projection
+M = P * V * R_x * R_y * T
