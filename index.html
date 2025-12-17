@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphics Fall 2025</title>
+    <style>
+        /* --- Basic Reset & Typography --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #1a1a1a; }
+        p.subtitle { color: #666; font-size: 1.1rem; }
+
+        /* --- Grid Layout --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Card Styling (Container) --- */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e1e4e8;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Makes cards same height in a row */
+        }
+
+        /* Top part of card (Title/Desc) */
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1; /* Pushes the buttons to the bottom */
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Button Section --- */
+        .card-actions {
+            background-color: #fafafa;
+            border-top: 1px solid #eaeaea;
+            padding: 1rem 1.5rem;
+        }
+
+        .actions-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* --- The Small Buttons --- */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            background-color: #e3e8ee;
+            color: #444;
+            border: 1px solid transparent;
+        }
+
+        .btn:hover {
+            background-color: #dbe1e8;
+            transform: translateY(-1px);
+        }
+
+        /* Optional: Highlight the "Final" version button */
+        .btn.primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn.primary:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Worksheets and Project</h1>
+        <p class="subtitle">by Filip Merlung (s180436)</p>
+    </header>
+
+    <main class="project-grid">
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Project - Texture layer viewer</div>
+            </div>
+            
+            <div class="card-actions">
+                <div class="actions-label">Select part</div>
+                <div class="btn-group">
+                    <a href="./project/index.html" class="btn">Final version</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Worksheet 1</div>
+            </div>
+            
+            <div class="card-actions">
+                <div class="actions-label">Select Part</div>
+                <div class="btn-group">
+                    <a href="./w1/part1/index.html" class="btn">1</a>
+                    <a href="./w1/part2/index.html" class="btn">2</a>
+                    <a href="./w1/part3/index.html" class="btn">3</a>
+                    <a href="./w1/part4/index.html" class="btn">4</a>
+                    <a href="./w1/part5/index.html" class="btn">5</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Worksheet 2</div>
+            </div>
+            
+            <div class="card-actions">
+                <div class="actions-label">Select part</div>
+                <div class="btn-group">
+                    <a href="./w2/part1/index.html" class="btn">1</a>
+                    <a href="./w2/part2/index.html" class="btn">2</a>
+                    <a href="./w2/part3/index.html" class="btn">3</a>
+                    <a href="./w2/part4/index.html" class="btn">4</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">Worksheet 3</div>
+            </div>
+            
+            <div class="card-actions">
+                <div class="actions-label">Select part</div>
+                <div class="btn-group">
+                    <a href="./w3/part1/index.html" class="btn">1</a>
+                    <a href="./w3/part2/index.html" class="btn">2</a>
+                    <a href="./w3/part3/part3.txt" class="btn">2</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

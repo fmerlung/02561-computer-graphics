@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W2P3</title>
+        <script type="text/javascript" src="./utils.js"></script>
+        <script type="text/javascript" src="./webgpu.js"></script>
+    </head>
+    <body>
+        <div style="display: flex;">
+            <div>
+                <canvas id="canvas" width="600" height="600">
+                    Please use a browser that supports HTML5 canvas.
+                </canvas>
+            </div>
+            <div>
+                Mode:
+                <div>
+                    <select id="drawingMode" 
+                            size="2" 
+                            style="overflow:hidden">
+                        <option value="0" selected>Points</option>
+                        <option value="1" selected>Triangles</option>
+                    </select>
+                </div>
+                Point color:
+                <div>
+                    <select id="colorMenu" size="8" style="overflow:hidden">
+                        <option value="0" selected>Black</option>
+                        <option value="1" selected>Red</option>
+                        <option value="2" selected>Yellow</option>
+                        <option value="3" selected>Green</option>
+                        <option value="4" selected>Blue</option>
+                        <option value="5" selected>Magenta</option>
+                        <option value="6" selected>Cyan</option>
+                        <option value="7" selected>Cornflower</option>
+                    </select>
+                </div>
+                Clear color:
+                <div>
+                    <select id="clearMenu" size="1">
+                        <option value="0" selected>Black</option>
+                        <option value="1" selected>Red</option>
+                        <option value="2" selected>Yellow</option>
+                        <option value="3" selected>Green</option>
+                        <option value="4" selected>Blue</option>
+                        <option value="5" selected>Magenta</option>
+                        <option value="6" selected>Cyan</option>
+                        <option value="7" selected>Cornflower</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="clearButton">clear canvas</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
